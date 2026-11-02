@@ -1,6 +1,6 @@
 # Tasks - Disney Character Encyclopedia
 
-- [ ] Task 1: Show Character list from local file
+- [X] Task 1: Show Character list from local file
   Done when: I open the app and see every character and it's picture
 - [ ] Task 2: Click a character to show it's details
   Done when: Before I click I see "Pick a character"; after clicking "Mickey Mouse" I see it's movie appearances, tv show appearances and allies in a separate page.
