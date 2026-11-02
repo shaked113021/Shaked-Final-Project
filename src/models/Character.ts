@@ -3,6 +3,7 @@ export interface Character {
   url: string;
   name: string;
   sourceUrl: string;
+  imageUrl: string;
   films: [string];
   shortFilms: [string];
   tvShows: [string];
