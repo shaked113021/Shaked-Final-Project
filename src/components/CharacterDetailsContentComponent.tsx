@@ -1,16 +1,6 @@
 import { Link } from "react-router";
-import type { Character } from "../models/Character";
-
-interface CharacterDetailsContentComponentProps {
-  character: Character;
-}
-
-interface DetailsSectionProps {
-  title: string;
-  items: string[];
-  // When given, each item links to the page this returns
-  getItemPath?: (item: string) => string;
-}
+import type { CharacterDetailsContentComponentProps } from "../models/props/CharacterDetailsContentComponentProps";
+import type { DetailsSectionProps } from "../models/props/DetailsSectionProps";
 
 function DetailsSection({ title, items, getItemPath }: DetailsSectionProps) {
   return (

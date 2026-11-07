@@ -1,14 +1,6 @@
-import type { Character } from "../models/Character";
 import CharacterListItemsComponent from "./CharacterListItemsComponent";
 import PaginationComponent from "./PaginationComponent";
-
-interface FilmCharactersContentComponentProps {
-  film: string;
-  characters: Character[];
-  currentPage: number;
-  totalPages: number;
-  onPageChange: (page: number) => void;
-}
+import type { FilmCharactersContentComponentProps } from "../models/props/FilmCharactersContentComponentProps";
 
 function FilmCharactersContentComponent({ film, characters, currentPage, totalPages, onPageChange }: FilmCharactersContentComponentProps) {
   return (

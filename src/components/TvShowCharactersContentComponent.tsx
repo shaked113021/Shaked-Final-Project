@@ -1,14 +1,6 @@
-import type { Character } from "../models/Character";
 import CharacterListItemsComponent from "./CharacterListItemsComponent";
 import PaginationComponent from "./PaginationComponent";
-
-interface TvShowCharactersContentComponentProps {
-  show: string;
-  characters: Character[];
-  currentPage: number;
-  totalPages: number;
-  onPageChange: (page: number) => void;
-}
+import type { TvShowCharactersContentComponentProps } from "../models/props/TvShowCharactersContentComponentProps";
 
 function TvShowCharactersContentComponent({ show, characters, currentPage, totalPages, onPageChange }: TvShowCharactersContentComponentProps) {
   return (
