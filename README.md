@@ -14,4 +14,6 @@ In the root folder of the project, run:
 please enter the provided url in your favorite browser.
 ### Running the tests
 In the root folder of the project, run:
-`npm test`
+`npm test` to run in cli mode
+or
+`npm run test:ui` to run in graphical mode

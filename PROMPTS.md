@@ -79,3 +79,11 @@
 **18:16 · claude**
 
 > can you refactor out props interfaces to models/props. each props model should have it's own .ts file
+
+**18:48 · claude**
+
+> please add @vitest/ui
+
+**18:49 · claude**
+
+> add test:ui script
