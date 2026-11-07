@@ -39,3 +39,11 @@
 **16:08 · claude**
 
 > please add paging support
+
+**16:15 · claude**
+
+> please make clicking on the header(h1) return to homepage
+
+**16:16 · claude**
+
+> `
