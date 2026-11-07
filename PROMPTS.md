@@ -75,3 +75,7 @@
 **17:05 · claude**
 
 > please create those tests
+
+**18:16 · claude**
+
+> can you refactor out props interfaces to models/props. each props model should have it's own .ts file

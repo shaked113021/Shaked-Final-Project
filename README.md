@@ -1,32 +1,17 @@
-# React + TypeScript + Vite
+# Shaked-Final-Project
+## Disney Character Encyclopedia
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This project display disney characters fetched from: [https://disneyapi.dev/](https://disneyapi.dev/)
+each character is detailed with fims, TV shows and allies
+### Main features:
+- searching a character by name
+- searching characters by film/tv show(by clicking the name of it in the details page)
 
-Currently, two official plugins are available:
+### running the app
+In the root folder of the project, run:
+`npm run dev`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+please enter the provided url in your favorite browser.
+### Running the tests
+In the root folder of the project, run:
+`npm test`
