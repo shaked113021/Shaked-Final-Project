@@ -4,7 +4,7 @@
   Done when: I open the app and see every character and it's picture
 - [X] Task 2: Click a character to show it's details <br>
   Done when: Before I click I see "Pick a character"; after clicking "Mickey Mouse" I see it's movie appearances, tv show appearances and allies in a separate page.
-- [ ] Task 3: Add tests for the acceptance criteria in PRD.md <br>
+- [X] Task 3: Add tests for the acceptance criteria in PRD.md <br>
   Done when: `npm test` passes.
 - [X] Task 4: Add a search box that filter by name <br>
   Done when: I type "Mickey" and see only Character with Mickey in the name
