@@ -1,6 +1,6 @@
 import CharacterListItemsComponent from "./CharacterListItemsComponent";
 import PaginationComponent from "./PaginationComponent";
-import type { TvShowCharactersContentComponentProps } from "../models/props/TvShowCharactersContentComponentProps";
+import type { TvShowCharactersContentComponentProps } from "../props/TvShowCharactersContentComponentProps";
 
 function TvShowCharactersContentComponent({ show, characters, currentPage, totalPages, onPageChange }: TvShowCharactersContentComponentProps) {
   return (

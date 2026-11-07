@@ -87,3 +87,15 @@
 **18:49 · claude**
 
 > add test:ui script
+
+**19:48 · claude**
+
+> please move the directory src/models/props to src/models. make changes in the code as needed
+
+**19:48 · claude**
+
+> undo
+
+**19:49 · claude**
+
+> please move the directory src/models/props to src/props. make changes in the code as needed

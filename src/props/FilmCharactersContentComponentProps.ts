@@ -1,4 +1,4 @@
-import type { Character } from "../Character";
+import type { Character } from "../models/Character";
 
 export interface FilmCharactersContentComponentProps {
   film: string;

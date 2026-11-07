@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import type { CharacterListItemsComponentProps } from "../models/props/CharacterListItemsComponentProps";
+import type { CharacterListItemsComponentProps } from "../props/CharacterListItemsComponentProps";
 
 function CharacterListItemsComponent({ characters }: CharacterListItemsComponentProps) {
   return (

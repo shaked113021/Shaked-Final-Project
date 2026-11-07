@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import type { PaginationComponentProps } from "../models/props/PaginationComponentProps";
+import type { PaginationComponentProps } from "../props/PaginationComponentProps";
 
 function PaginationComponent({ currentPage, totalPages, onPageChange }: PaginationComponentProps) {
   // With 197 pages we can't show them all: first, last, and the current page's neighbours

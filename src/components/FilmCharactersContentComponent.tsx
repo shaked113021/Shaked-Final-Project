@@ -1,6 +1,6 @@
 import CharacterListItemsComponent from "./CharacterListItemsComponent";
 import PaginationComponent from "./PaginationComponent";
-import type { FilmCharactersContentComponentProps } from "../models/props/FilmCharactersContentComponentProps";
+import type { FilmCharactersContentComponentProps } from "../props/FilmCharactersContentComponentProps";
 
 function FilmCharactersContentComponent({ film, characters, currentPage, totalPages, onPageChange }: FilmCharactersContentComponentProps) {
   return (
