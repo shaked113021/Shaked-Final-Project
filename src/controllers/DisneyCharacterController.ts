@@ -3,10 +3,16 @@ import type { SingleCharacterResponse } from "../models/SingleCharacterResponse"
 
 const API_URL = "https://api.disneyapi.dev/character";
 
-export async function getAllCharacters(page: number = 1, name: string = ""): Promise<CharacterListResponse | null> {
+// The API treats filter values as regular expressions: "Hercules (film)" finds nothing, and "Fantasia"
+// also finds "Fantasia 2000". Escaping and anchoring the title matches only that title (ignoring case).
+function exactMatch(title: string): string {
+  const escapedTitle = title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return encodeURIComponent(`^${escapedTitle}$`);
+}
+
+async function fetchCharacterList(query: string): Promise<CharacterListResponse | null> {
   try {
-    const nameParameter = name ? `&name=${encodeURIComponent(name)}` : "";
-    const response = await fetch(`${API_URL}?page=${page}${nameParameter}`);
+    const response = await fetch(`${API_URL}?${query}`);
     if (!response.ok) {
       return null;
     }
@@ -16,6 +22,19 @@ export async function getAllCharacters(page: number = 1, name: string = ""): Pro
   } catch {
     return null;
   }
+}
+
+export function getAllCharacters(page: number = 1, name: string = ""): Promise<CharacterListResponse | null> {
+  const nameParameter = name ? `&name=${encodeURIComponent(name)}` : "";
+  return fetchCharacterList(`page=${page}${nameParameter}`);
+}
+
+export function getCharactersByFilm(film: string, page: number = 1): Promise<CharacterListResponse | null> {
+  return fetchCharacterList(`page=${page}&films=${exactMatch(film)}`);
+}
+
+export function getCharactersByTvShow(show: string, page: number = 1): Promise<CharacterListResponse | null> {
+  return fetchCharacterList(`page=${page}&tvShows=${exactMatch(show)}`);
 }
 
 export async function getCharacterById(id: number): Promise<SingleCharacterResponse | null> {

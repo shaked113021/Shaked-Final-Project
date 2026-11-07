@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import type { Character } from "../models/Character";
 
 interface CharacterDetailsContentComponentProps {
@@ -7,9 +8,11 @@ interface CharacterDetailsContentComponentProps {
 interface DetailsSectionProps {
   title: string;
   items: string[];
+  // When given, each item links to the page this returns
+  getItemPath?: (item: string) => string;
 }
 
-function DetailsSection({ title, items }: DetailsSectionProps) {
+function DetailsSection({ title, items, getItemPath }: DetailsSectionProps) {
   return (
     <section className="character-details-section">
       <h3>{title}</h3>
@@ -18,7 +21,7 @@ function DetailsSection({ title, items }: DetailsSectionProps) {
       ) : (
         <ul>
           {items.map((item) => (
-            <li key={item}>{item}</li>
+            <li key={item}>{getItemPath ? <Link to={getItemPath(item)}>{item}</Link> : item}</li>
           ))}
         </ul>
       )}
@@ -33,8 +36,16 @@ function CharacterDetailsContentComponent({ character }: CharacterDetailsContent
       {character.imageUrl && (
         <img className="character-details-image" src={character.imageUrl} alt={character.name} />
       )}
-      <DetailsSection title="Films" items={character.films} />
-      <DetailsSection title="TV Shows" items={character.tvShows} />
+      <DetailsSection
+        title="Films"
+        items={character.films}
+        getItemPath={(film) => `/films/${encodeURIComponent(film)}`}
+      />
+      <DetailsSection
+        title="TV Shows"
+        items={character.tvShows}
+        getItemPath={(show) => `/tv_shows/${encodeURIComponent(show)}`}
+      />
       <DetailsSection title="Allies" items={character.allies} />
     </div>
   );

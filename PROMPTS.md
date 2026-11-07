@@ -63,3 +63,7 @@
 **16:45 · claude**
 
 > if the search bar is empty, the name parameter should not be sent with the request
+
+**16:58 · claude**
+
+> please add under the route /films/:film list that is filtered by film (using the api parameter films which receives a string despite its plural nature) do the same for tv shows under the route /tv_shows/:show (using api parameter tv shows with the same logic). create new functions inside the controller, one for each list. the lists should look like the main list except have a h2 header "Characters in <show/film name>". inside character details, clicking on a name of a tv show / film should redirect to the respectable filtered page. each route(films/:film and tv_shows/:show) should have its own component structure(inner component and wrapper), even if it is redundent

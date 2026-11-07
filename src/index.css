@@ -234,3 +234,11 @@ code {
   border: 1px solid var(--border);
   border-radius: 8px;
 }
+
+.character-list-title {
+  padding: 0 24px;
+}
+
+.character-details-section a {
+  color: var(--accent);
+}

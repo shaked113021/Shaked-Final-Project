@@ -8,9 +8,9 @@
   Done when: `npm test` passes.
 - [X] Task 4: Add a search box that filter by name <br>
   Done when: I type "Mickey" and see only Character with Mickey in the name
-- [ ] Task 5: Filter by movie. <br>
+- [X] Task 5: Filter by movie. <br>
   Done when: after I click on a movie I see all the characters in that movie
-- [ ] Task 6: Filter by TV Show <br>
+- [X] Task 6: Filter by TV Show <br>
   Done when: after I click on a TV Show I see all the characters in that show
 - [X] Task 7: Load from live API <br>
   Done when: The app is loading data from the api

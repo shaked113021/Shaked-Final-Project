@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router";
 import { getAllCharacters } from "../controllers/DisneyCharacterController";
 import type { CharacterListResponse } from "../models/CharacterListResponse";
+import { parsePage } from "../utils/parsePage";
 import CharacterListItemsComponent from "./CharacterListItemsComponent";
 import PaginationComponent from "./PaginationComponent";
 
@@ -13,11 +14,6 @@ interface LoadedPage {
   name: string;
   // null = error
   response: CharacterListResponse | null;
-}
-
-function parsePage(value: string | null): number {
-  const page = Number(value);
-  return Number.isInteger(page) && page > 0 ? page : 1;
 }
 
 function CharacterListComponent() {
