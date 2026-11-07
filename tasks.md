@@ -7,7 +7,7 @@
 - [ ] Task 3: Add tests for the acceptance criteria in PRD.md <br>
   Done when: `npm test` passes.
 - [X] Task 4: Add a search box that filter by name <br>
-  Done when: I type "Mickey" and see only Mickey Mouse
+  Done when: I type "Mickey" and see only Character with Mickey in the name
 - [ ] Task 5: Filter by movie. <br>
   Done when: after I click on a movie I see all the characters in that movie
 - [ ] Task 6: Filter by TV Show <br>
