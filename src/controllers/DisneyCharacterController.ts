@@ -1,19 +1,7 @@
 import type { CharacterListResponse } from "../models/CharacterListResponse";
 import type { SingleCharacterResponse } from "../models/SingleCharacterResponse";
-import mickeyMouse from "../data/mickey_mouse.json";
-import type { Character } from "../models/Character";
 
 const API_URL = "https://api.disneyapi.dev/character";
-
-const singleCharacter: SingleCharacterResponse = {
-  info: {
-    count: mickeyMouse.info.count as number,
-    totalPages: mickeyMouse.info.totalPages as number,
-    previousPage: (mickeyMouse.info.previousPage === null ? undefined : mickeyMouse.info.previousPage),
-    nextPage: (mickeyMouse.info.nextPage === null ? undefined : mickeyMouse.info.nextPage)
-  },
-  data: (mickeyMouse.data as unknown) as Character
-};
 
 export async function getAllCharacters(page: number = 1): Promise<CharacterListResponse | null> {
   try {
@@ -24,6 +12,16 @@ export async function getAllCharacters(page: number = 1): Promise<CharacterListR
   }
 }
 
-export function getCharacterById(id: number): SingleCharacterResponse {
-  return singleCharacter;
+export async function getCharacterById(id: number): Promise<SingleCharacterResponse | null> {
+  try {
+    const response = await fetch(`${API_URL}/${id}`);
+    if (!response.ok) {
+      return null;
+    }
+    const body = await response.json();
+    // The API answers 200 with an array, not a character, when the id doesn't exist
+    return Array.isArray(body.data) ? null : body;
+  } catch {
+    return null;
+  }
 }

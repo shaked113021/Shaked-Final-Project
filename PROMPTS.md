@@ -47,3 +47,11 @@
 **16:16 · claude**
 
 > `
+
+**16:32 · claude**
+
+> please create a details page for each item on the list. the details should be a separate page on a separate component and should include a h2 header with the chatacter name, the image directly under it(centered horizontally), list of films, list of tv shows and list of allies. the page's routing should be items/:id/. use now the local data. please make use of use effect and an inner component with a wrapper
+
+**16:35 · claude**
+
+> can you please change the details component to use live api. make changes to the controller if needed

@@ -48,7 +48,7 @@ function CharacterListComponent() {
       {response === null && <p>Something went wrong while loading the characters. Please try again later.</p>}
       {response && (
         <>
-          <p>Please select a character</p>
+          <p>Pick a character</p>
           <CharacterListItemsComponent characters={response.data} />
           <PaginationComponent
             currentPage={page}
