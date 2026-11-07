@@ -21,3 +21,21 @@
 **17:57 · claude**
 
 > I added imageUrl myself to the model please show the images
+
+## 2026-11-07
+
+**16:06 · claude**
+
+> can you move the h1 header to main.tsx. also please style the list such that each item is in a card where the name is on the left and the picture is on the right.
+
+**16:07 · claude**
+
+> make the list vertical
+
+**16:07 · claude**
+
+> cap it at 600px and centre it
+
+**16:08 · claude**
+
+> please add paging support

@@ -1,18 +1,9 @@
 import type { CharacterListResponse } from "../models/CharacterListResponse";
 import type { SingleCharacterResponse } from "../models/SingleCharacterResponse";
-import characters from "../data/characters.json";
 import mickeyMouse from "../data/mickey_mouse.json";
 import type { Character } from "../models/Character";
 
-const characterList: CharacterListResponse = {
-  info: {
-    count: characters.info.count as number,
-    totalPages: characters.info.totalPages as number,
-    previousPage: (characters.info.previousPage === null ? undefined : characters.info.previousPage),
-    nextPage: (characters.info.nextPage === null ? undefined : characters.info.nextPage)
-  },
-  data: (characters.data as [unknown]) as [Character]
-};
+const API_URL = "https://api.disneyapi.dev/character";
 
 const singleCharacter: SingleCharacterResponse = {
   info: {
@@ -24,8 +15,13 @@ const singleCharacter: SingleCharacterResponse = {
   data: (mickeyMouse.data as unknown) as Character
 };
 
-export function getAllCharacters(page: number = 1): CharacterListResponse {
-  return characterList;
+export async function getAllCharacters(page: number = 1): Promise<CharacterListResponse | null> {
+  try {
+    const response = await fetch(`${API_URL}?page=${page}`);
+    return response.ok ? await response.json() : null;
+  } catch {
+    return null;
+  }
 }
 
 export function getCharacterById(id: number): SingleCharacterResponse {
