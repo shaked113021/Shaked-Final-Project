@@ -55,3 +55,11 @@
 **16:35 · claude**
 
 > can you please change the details component to use live api. make changes to the controller if needed
+
+**16:42 · claude**
+
+> add search bar in the list. edit the controller such that it also recieves a name parameter of type string. add the api parameter name to the fetch request. it should always be there, even if it is empty
+
+**16:45 · claude**
+
+> if the search bar is empty, the name parameter should not be sent with the request

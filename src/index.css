@@ -220,3 +220,17 @@ code {
   margin: 0;
   padding-left: 24px;
 }
+
+.search-bar {
+  display: block;
+  width: calc(100% - 48px);
+  max-width: 552px;
+  box-sizing: border-box;
+  margin: 0 auto 16px;
+  padding: 8px 12px;
+  font: inherit;
+  color: var(--text-h);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
