@@ -4,11 +4,11 @@ export interface Character {
   name: string;
   sourceUrl: string;
   imageUrl: string;
-  films: [string];
-  shortFilms: [string];
-  tvShows: [string];
-  videoGames: [string];
-  parkAttractions: [string];
-  allies: [string];
-  enemies: [string];
+  films: string[];
+  shortFilms: string[];
+  tvShows: string[];
+  videoGames: string[];
+  parkAttractions: string[];
+  allies: string[];
+  enemies: string[];
 };
